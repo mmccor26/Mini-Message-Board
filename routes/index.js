@@ -20,11 +20,8 @@ router.get('/new', function(req, res, next) {
 
 router.post('/new', function(req, res, next) {
   
-  messages.push({text: req.body.msg,user:req.body.name,added: new Date()
-
-    
-  });
-  res.render('form', { title: "New Message", messages: messages });
+  messages.push({text: req.body.msg,user:req.body.name,added: new Date()});
+  res.redirect('/');
 });
 
 
